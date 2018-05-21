@@ -1,0 +1,12 @@
+server:
+  port: 7073
+
+spring:
+  application:
+    name: "account-service"
+
+eureka:
+  client:
+    service-url:
+      defaultZone: "http://localhost:7070/eureka"
+
