@@ -81,6 +81,7 @@
     <logger name="org.apache.zookeeper" level="WARN"/>
     <logger name="org.apache.curator.framework" level="INFO"/>
     <logger name="org.springframework.core.env" level="INFO"/>
+    <logger name="org.springframework.web.servlet.view.freemarker" level="INFO"/>
     <logger name="org.springframework.beans.factory.support.DefaultListableBeanFactory" level="INFO"/>
     <logger name="org.springframework.boot.logging.ClasspathLoggingApplicationListener" level="INFO"/>
     <logger name="org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader" level="INFO"/>

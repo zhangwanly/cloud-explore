@@ -1,4 +1,6 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.ace.explore.cloud</groupId>
@@ -14,9 +16,10 @@
         <module>cloud-user</module>
         <module>cloud-trade</module>
         <module>cloud-account</module>
+        <module>cloud-gateway</module>
     </modules>
     <packaging>pom</packaging>
-    <name>tripod-parent</name>
+    <name>cloud-parent</name>
     <url>http://maven.apache.org</url>
 
     <properties>
@@ -60,43 +63,43 @@
     </profiles>
 
     <!-- 私服链接 -->
-    <repositories>
-        <repository>
-            <id>niiwoo-nexus</id>
-            <url>http://192.168.18.14:8080/nexus/content/groups/public/</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-                <updatePolicy>always</updatePolicy>
-            </snapshots>
-        </repository>
-    </repositories>
-    <pluginRepositories>
-        <pluginRepository>
-            <id>spring-releases</id>
-            <url>https://repo.spring.io/libs-release</url>
-        </pluginRepository>
-        <pluginRepository>
-            <id>protoc-plugin</id>
-            <url>https://dl.bintray.com/sergei-ivanov/maven</url>
-        </pluginRepository>
-    </pluginRepositories>
+    <!--<repositories>-->
+    <!--<repository>-->
+    <!--<id>niiwoo-nexus</id>-->
+    <!--<url>http://192.168.18.14:8080/nexus/content/groups/public/</url>-->
+    <!--<releases>-->
+    <!--<enabled>true</enabled>-->
+    <!--</releases>-->
+    <!--<snapshots>-->
+    <!--<enabled>true</enabled>-->
+    <!--<updatePolicy>always</updatePolicy>-->
+    <!--</snapshots>-->
+    <!--</repository>-->
+    <!--</repositories>-->
+    <!--<pluginRepositories>-->
+    <!--<pluginRepository>-->
+    <!--<id>spring-releases</id>-->
+    <!--<url>https://repo.spring.io/libs-release</url>-->
+    <!--</pluginRepository>-->
+    <!--<pluginRepository>-->
+    <!--<id>protoc-plugin</id>-->
+    <!--<url>https://dl.bintray.com/sergei-ivanov/maven</url>-->
+    <!--</pluginRepository>-->
+    <!--</pluginRepositories>-->
 
-    <!-- 私服部署 -->
-    <distributionManagement>
-        <repository>
-            <id>releases</id>
-            <name>Internal Releases</name>
-            <url>http://192.168.18.14:8080/nexus/content/repositories/releases</url>
-        </repository>
-        <snapshotRepository>
-            <id>snapshots</id>
-            <name>Internal Snapshots</name>
-            <url>http://192.168.18.14:8080/nexus/content/repositories/snapshots</url>
-        </snapshotRepository>
-    </distributionManagement>
+    <!--&lt;!&ndash; 私服部署 &ndash;&gt;-->
+    <!--<distributionManagement>-->
+    <!--<repository>-->
+    <!--<id>releases</id>-->
+    <!--<name>Internal Releases</name>-->
+    <!--<url>http://192.168.18.14:8080/nexus/content/repositories/releases</url>-->
+    <!--</repository>-->
+    <!--<snapshotRepository>-->
+    <!--<id>snapshots</id>-->
+    <!--<name>Internal Snapshots</name>-->
+    <!--<url>http://192.168.18.14:8080/nexus/content/repositories/snapshots</url>-->
+    <!--</snapshotRepository>-->
+    <!--</distributionManagement>-->
 
     <dependencyManagement>
         <dependencies>
@@ -124,11 +127,30 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-eureka</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-tomcat</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-undertow</artifactId>
+        </dependency>
         <!--<dependency>-->
-            <!--<groupId>org.springframework.boot</groupId>-->
-            <!--<artifactId>spring-boot-devtools</artifactId>-->
-            <!--<optional>true</optional>-->
+        <!--<groupId>org.springframework.boot</groupId>-->
+        <!--<artifactId>spring-boot-devtools</artifactId>-->
+        <!--<optional>true</optional>-->
         <!--</dependency>-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.46</version>
+        </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>

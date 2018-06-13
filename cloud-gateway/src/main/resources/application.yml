@@ -1,9 +1,9 @@
 server:
-  port: 7073
+  port: 7060
 
 spring:
   application:
-    name: "account-service"
+    name: "gateway-service"
 
 eureka:
   client:
@@ -11,4 +11,9 @@ eureka:
       defaultZone: "http://localhost:7070/eureka"
   instance:
     prefer-ip-address: true
+
+security:
+  basic:
+    enabled: false
+
 
