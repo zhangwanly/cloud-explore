@@ -1,0 +1,14 @@
+server:
+  port: 7072
+
+spring:
+  application:
+    name: "trade-service"
+
+eureka:
+  client:
+    service-url:
+      defaultZone: "http://localhost:7070/eureka"
+
+  instance:
+    prefer-ip-address: true

@@ -2,29 +2,26 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>cloud-parent</artifactId>
-        <groupId>com.ace.explore.cloud</groupId>
+        <groupId>com.ace.cloud</groupId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>cloud-user</artifactId>
-    <packaging>jar</packaging>
+    <packaging>pom</packaging>
 
     <name>cloud-user</name>
     <url>http://maven.apache.org</url>
+    <modules>
+        <module>cloud-user-api</module>
+        <module>cloud-user-impl</module>
+    </modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-redis</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-hystrix</artifactId>
-        </dependency>
+
     </dependencies>
 </project>
