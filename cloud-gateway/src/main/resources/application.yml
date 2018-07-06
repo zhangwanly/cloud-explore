@@ -15,5 +15,8 @@ eureka:
 security:
   basic:
     enabled: false
+  user:
+    name: "zhangwanli"
+    password: "123456"
 
 

@@ -29,7 +29,7 @@ import java.util.List;
  */
 @Configuration
 @EnableSwagger2
-public class GateWayConfiguration {
+public class SwaggerConfiguration {
 
     private List<ResponseMessage> globalResponseMessage = Lists.newArrayList();
 
