@@ -9,12 +9,13 @@ spring:
     port: 6379
     password: ace@redis99
     database: 8
-    timeout: 10000
-    pool:
-      max-active: 10
-      max-idle: 5
-      min-idle: 2
-      max-wait: 2000
+    timeout: 10s
+    jedis:
+      pool:
+        max-active: 10
+        max-idle: 5
+        min-idle: 2
+        max-wait: 2s
 
 eureka:
   client:

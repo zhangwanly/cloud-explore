@@ -1,18 +1,19 @@
 package com.ace.cloud;
 
-import org.springframework.boot.Banner;
 import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 /**
- * Created by zhangwanli on 2018/6/12.
+ * Created by zhangwanli on 2018/7/6.
  */
 @SpringBootApplication
-public class GatewayApplication {
+@EnableDiscoveryClient
+public class MobileApplication {
 
     public static void main(String[] args) {
-        new SpringApplicationBuilder().web(WebApplicationType.SERVLET).bannerMode(Banner.Mode.CONSOLE).run(args);
+        new SpringApplicationBuilder(MobileApplication.class).web(WebApplicationType.SERVLET).run(args);
     }
 
 }
