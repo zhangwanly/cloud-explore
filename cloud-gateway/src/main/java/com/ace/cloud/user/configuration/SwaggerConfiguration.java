@@ -1,4 +1,4 @@
-package com.ace.cloud.configuration;
+package com.ace.cloud.user.configuration;
 
 import com.google.common.base.Joiner;
 import com.google.common.collect.Lists;

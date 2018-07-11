@@ -1,4 +1,4 @@
-package com.ace.cloud.configuration;
+package com.ace.cloud.user.configuration;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;

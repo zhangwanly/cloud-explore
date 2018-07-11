@@ -1,4 +1,4 @@
-package com.ace.cloud.controller;
+package com.ace.cloud.user.controller;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

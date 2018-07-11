@@ -1,4 +1,4 @@
-package com.ace.cloud.constant;
+package com.ace.cloud.user.constant;
 
 /**
  * Created by zhangwanli on 2018/6/8.

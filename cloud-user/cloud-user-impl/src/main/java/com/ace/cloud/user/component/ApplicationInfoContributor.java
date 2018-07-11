@@ -1,4 +1,4 @@
-package com.ace.cloud.component;
+package com.ace.cloud.user.component;
 
 import org.apache.commons.lang.time.FastDateFormat;
 import org.springframework.boot.actuate.info.Info;

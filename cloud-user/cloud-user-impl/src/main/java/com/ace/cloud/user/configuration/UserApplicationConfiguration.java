@@ -1,6 +1,6 @@
-package com.ace.cloud.configuration;
+package com.ace.cloud.user.configuration;
 
-import com.ace.cloud.constant.RedisKeys;
+import com.ace.cloud.user.constant.RedisKeys;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
